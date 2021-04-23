@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - lava
+  - JoyStick
   layers:
   - Default
   - TransparentFX

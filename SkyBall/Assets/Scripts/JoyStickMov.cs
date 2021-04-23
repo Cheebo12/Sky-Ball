@@ -6,6 +6,7 @@ public class JoyStickMov : MonoBehaviour
 {
     Rigidbody rb;
     protected Joystick joystick;
+    // [SerializeField]protected JoyButton joybutton;
     public float speed;
     public Transform spawn;
     // Start is called before the first frame update
@@ -13,6 +14,7 @@ public class JoyStickMov : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         joystick = FindObjectOfType<Joystick>();
+        // joybutton = FindObjectOfType<Joybutton>();
     }
 
     // Update is called once per frame
