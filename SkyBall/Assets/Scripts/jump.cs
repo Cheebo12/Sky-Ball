@@ -8,7 +8,7 @@ public ParticleSystem dust;
     public float JumpForce = 5;
     public bool grounded;
     bool jumping;   
-   
+    bool power_jump = false;
     
     // Start is called before the first frame update
     void Start()
@@ -23,11 +23,18 @@ public ParticleSystem dust;
     void Update()
     {
         if(jumping && grounded){
-        Debug.Log("Should jump");
-        rb.velocity += Vector3.up*5f;                
-        grounded = false;
-        dustplay();
-        jumping = false;
+            Debug.Log("Should jump");
+            rb.velocity += Vector3.up*5f;                
+            grounded = false;
+            dustplay();
+            jumping = false;
+        }
+        else if(power_jump && grounded){
+            Debug.Log("Should jump");
+            rb.velocity += Vector3.up*10f;                
+            grounded = false;
+            dustplay();
+            power_jump = false;
         }
         
     }
@@ -37,8 +44,11 @@ public ParticleSystem dust;
             grounded = true;
 
         }
-        
+        else if(col.gameObject.tag == "jump"){
+            power_jump = true;
+        }
     }
+    
     public void ball_jump(){
         jumping = true;
     }
