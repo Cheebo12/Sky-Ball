@@ -8,6 +8,8 @@ TagManager:
   - lava
   - JoyStick
   - jump
+  - flash
+  - slow
   layers:
   - Default
   - TransparentFX
