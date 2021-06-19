@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class AttachToPlatform : MonoBehaviour
 {
-    public GameObject player;
+    
 
     private void OnTriggerEnter(Collider other) {
-        if(other.gameObject == player){
+        if(other.tag == "Player"){
             Debug.Log("On Platform");
-            player.transform.parent = transform;
+            other.transform.parent = transform;
         }
     }
     private void OnTriggerExit(Collider other) {
-        if(other.gameObject == player){
-            player.transform.parent = null;
+        if(other.tag == "Player"){
+            other.transform.parent = null;
         }
     }
 }
