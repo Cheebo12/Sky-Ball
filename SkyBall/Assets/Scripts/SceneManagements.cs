@@ -11,16 +11,17 @@ public class SceneManagements : MonoBehaviour
         Instance = this;
         Load("player");
         Load("Level 1");
+        Load("Level 2");
     }
 
     // Update is called once per frame
-    void Load(string sceneName)
+    public void Load(string sceneName)
     {
         if(!SceneManager.GetSceneByName(sceneName).isLoaded){
             SceneManager.LoadScene(sceneName,LoadSceneMode.Additive);
         }
     }
-    void UnLoad(string sceneName)
+    public void UnLoad(string sceneName)
     {
         if(SceneManager.GetSceneByName(sceneName).isLoaded){
             SceneManager.UnloadScene(sceneName);
