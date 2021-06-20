@@ -6,6 +6,7 @@ public class LoadLevel : MonoBehaviour
 {
     public string LoadName;
     public string UnloadName;
+    public GameObject door;
     // Start is called before the first frame update
     
     private void  OnTriggerEnter(Collider col){
@@ -15,6 +16,7 @@ public class LoadLevel : MonoBehaviour
         if(UnloadName != ""){
             StartCoroutine("UnloadScene");
         }
+        Destroy(door,2);
     }
 
     IEnumerator UnloadScene(){
