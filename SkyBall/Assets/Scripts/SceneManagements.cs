@@ -11,7 +11,7 @@ public class SceneManagements : MonoBehaviour
         Instance = this;
         Load("player");
         Load("Level 1");
-        Load("Level 2");
+      
     }
 
     // Update is called once per frame

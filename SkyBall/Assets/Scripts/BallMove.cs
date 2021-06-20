@@ -12,7 +12,6 @@ public class BallMove : MonoBehaviour
     public bool grounded;
     bool jumping;   
     bool power_jump = false;
-    float verticalvel;
     public ParticleSystem dust;
     
   
@@ -31,27 +30,21 @@ public class BallMove : MonoBehaviour
        vel = new Vector3(Input.GetAxis ("Horizontal"), 0, Input.GetAxis("Vertical"));
        rb.AddForce(vel*speed*Time.deltaTime);
     }
-       if(grounded){
+    
+       if(grounded && Input.GetKey(KeyCode.Space) && !power_jump){
                 Debug.Log("Should jump");
-                verticalvel = -gravity*Time.deltaTime;                
-            if(Input.GetKey(KeyCode.Space) && !power_jump){    
-                verticalvel = JumpForce;
+                rb.velocity = Vector3.zero;
+                rb.AddForce(Vector3.up*JumpForce*Time.deltaTime, ForceMode.Impulse);                
                 grounded = false;
                 dustplay();
                 jumping = false;
-            }
-        }else{
-            verticalvel -= gravity*Time.deltaTime;
         }
-        Vector3 moveVector = new Vector3(0f, verticalvel, 0f);
-        rb.MovePosition(moveVector*Time.deltaTime);
-       
-        // else if(grounded && Input.GetKey(KeyCode.Space) && power_jump){
-        //         rb.AddForce(Vector3.up*JumpForce*2*Time.deltaTime, ForceMode.Impulse);                
-        //         grounded = false;
-        //         dustplay();
-        //         jumping = false;
-        // }
+        else if(grounded && Input.GetKey(KeyCode.Space) && power_jump){
+                rb.AddForce(Vector3.up*JumpForce*2*Time.deltaTime, ForceMode.Impulse);                
+                grounded = false;
+                dustplay();
+                jumping = false;
+        }
 
     
 
@@ -74,6 +67,15 @@ public class BallMove : MonoBehaviour
             power_jump = true;
             Debug.Log("Power_Jump true");
             rb.velocity = Vector3.zero;
+        }
+        if(col.gameObject.tag == "flash"){
+            speed = 2000f;
+        }
+        else if(col.gameObject.tag == "slow"){
+            speed = 500f;
+        }
+        else{
+            speed = 1000f;
         }
         
     }
