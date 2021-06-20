@@ -5295,7 +5295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawn: {fileID: 629324598}
   speed: 1000
-  JumpForce: 100
+  JumpForce: 500
   grounded: 0
   dust: {fileID: 493190520}
 --- !u!114 &1147487989

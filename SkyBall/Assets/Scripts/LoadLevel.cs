@@ -12,11 +12,12 @@ public class LoadLevel : MonoBehaviour
     private void  OnTriggerEnter(Collider col){
         if(LoadName!=""){
             SceneManagements.Instance.Load(LoadName);
+            FindObjectOfType<AudioManager>().Play("LevelChange"); 
         }
         if(UnloadName != ""){
             StartCoroutine("UnloadScene");
         }
-        FindObjectOfType<AudioManager>().Play("LevelChange");  
+        
         Destroy(door,2);
     }
 

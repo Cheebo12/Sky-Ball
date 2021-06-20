@@ -13,5 +13,9 @@ public class sceneChange : MonoBehaviour
     {
         Debug.Log("Quit");
         Application.Quit();
-    }   
+    }  
+
+ public void credit(){
+     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +7);
+ }    
 }

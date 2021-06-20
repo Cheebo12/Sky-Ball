@@ -3216,8 +3216,8 @@ MonoBehaviour:
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: bbc521e471f30274e8c94be50119010c, type: 3}
-    volume: 0.396
-    pitch: 0
+    volume: 0.344
+    pitch: 0.67
     source: {fileID: 0}
   - name: Jump
     clip: {fileID: 8300000, guid: a5e560ba745eb634395aa4a6919d10cc, type: 3}
