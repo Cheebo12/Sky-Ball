@@ -38,6 +38,7 @@ public class BallMove : MonoBehaviour
                 grounded = false;
                 dustplay();
                 jumping = false;
+                FindObjectOfType<AudioManager>.Play("Jump");
         }
         else if(grounded && Input.GetKey(KeyCode.Space) && power_jump){
                 rb.AddForce(Vector3.up*JumpForce*2*Time.deltaTime, ForceMode.Impulse);                

@@ -296,3 +296,72 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2001842209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2001842211}
+  - component: {fileID: 2001842210}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2001842210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001842209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a6e9da06559444c8f8a62f40280bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Bounce
+    clip: {fileID: 8300000, guid: a5e560ba745eb634395aa4a6919d10cc, type: 3}
+    volume: 0.6
+    pitch: 0.84
+    source: {fileID: 0}
+  - name: Death
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: LevelChange
+    clip: {fileID: 8300000, guid: 2841b928ad085c0409c0b893093177ea, type: 3}
+    volume: 0.83
+    pitch: 0
+    source: {fileID: 0}
+  - name: Winner
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: Theme
+    clip: {fileID: 8300000, guid: bbc521e471f30274e8c94be50119010c, type: 3}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+--- !u!4 &2001842211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001842209}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 36.502975, y: 253.33345, z: 257.7978}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

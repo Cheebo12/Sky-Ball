@@ -16,6 +16,7 @@ public class LoadLevel : MonoBehaviour
         if(UnloadName != ""){
             StartCoroutine("UnloadScene");
         }
+        FindObjectOfType<AudioManager>().Play("LevelChange");  
         Destroy(door,2);
     }
 
