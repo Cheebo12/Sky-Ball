@@ -9,13 +9,12 @@ public class sceneChange : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
     }
 
- public void Exit()
+ public void ToMain()
     {
-        Debug.Log("Quit");
-        Application.Quit();
+        SceneManager.LoadScene("Main Menu");
     }  
 
  public void credit(){
-     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +7);
+     SceneManager.LoadScene("Credits");
  }    
 }

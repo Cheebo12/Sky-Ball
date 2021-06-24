@@ -65,7 +65,7 @@ public class BallMove : MonoBehaviour
         else if(col.gameObject.tag == "Floor" || col.gameObject.tag == "jump" || col.gameObject.tag == "slow"||col.gameObject.tag == "flash"){
             grounded = true;
             power_jump = false;
-         //   rb.velocity = Vector3.zero;
+            rb.velocity = Vector3.zero;
         }
         if(col.gameObject.tag == "jump"){
             power_jump = true;

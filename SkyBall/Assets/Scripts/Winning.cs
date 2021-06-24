@@ -9,9 +9,10 @@ public class Winning : MonoBehaviour
   void Start()
     {
         winning.SetActive(false);
+        
     }
 
-  private void OnTriggerExit(Collider other) {
+  private void OnTriggerEnter(Collider other) {
         if(other.tag == "Player"){
             winning.SetActive(true);
             Time.timeScale = 0f;
